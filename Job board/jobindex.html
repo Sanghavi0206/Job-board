@@ -1,0 +1,762 @@
+
+Index · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Careerfy – Find your dream job or hire top talent. Browse thousands of job listings across every industry." />
+  <title>Careerfy – Aim Higher. Reach Farther. Dream Bigger.</title>
+ 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+  <link rel="stylesheet" href="jobstyle.css" />
+</head>
+<body>
+ 
+  <!-- ===================== HEADER / NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+ 
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="Careerfy Home">
+        <span class="logo-icon"><i class="fas fa-briefcase"></i></span>
+        <span class="logo-text">Career<span class="logo-accent">fy</span></span>
+      </a>
+ 
+      <!-- Desktop Nav -->
+      <nav class="navbar__links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <div class="nav-dropdown">
+          <a href="pages.html" class="nav-link">Pages <i class="fas fa-chevron-down fa-xs"></i></a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="candidates.html" class="nav-link">For Candidates <i class="fas fa-chevron-down fa-xs"></i></a>
+          <div class="dropdown-menu">
+            <a href="candidates.html#browse">Browse Jobs</a>
+            <a href="candidates.html#resume">Upload Resume</a>
+            <a href="candidates.html#alerts">Job Alerts</a>
+            <a href="candidates.html#profile">My Profile</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="employers.html" class="nav-link">For Employers <i class="fas fa-chevron-down fa-xs"></i></a>
+          <div class="dropdown-menu">
+            <a href="employers.html#post">Post a Job</a>
+            <a href="employers.html#search">Search Candidates</a>
+            <a href="employers.html#dashboard">Dashboard</a>
+            <a href="employers.html#plans">Pricing Plans</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+ 
+      <!-- Auth Buttons -->
+      <div class="navbar__auth">
+        <a href="register.html" class="btn btn--ghost">Register</a>
+        <a href="signin.html" class="btn btn--outline">Sign In</a>
+        <a href="employers.html#post" class="btn btn--primary">
+          <i class="fas fa-plus"></i> Post Job
+        </a>
+      </div>
+ 
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+ 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="pages.html">Pages</a>
+        <a href="candidates.html">For Candidates</a>
+        <a href="employers.html">For Employers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="mobile-menu__auth">
+        <a href="register.html" class="btn btn--outline w-full">Register</a>
+        <a href="signin.html" class="btn btn--ghost w-full">Sign In</a>
+        <a href="employers.html#post" class="btn btn--primary w-full"><i class="fas fa-plus"></i> Post Job</a>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__particles" id="particles"></div>
+ 
+    <div class="container hero__content">
+      <span class="hero__eyebrow">
+        <i class="fas fa-sparkles"></i> #1 Job Platform in Your Industry
+      </span>
+      <h1 class="hero__headline">
+        Aim Higher.<br />Reach Farther.<br /><span class="headline-accent">Dream Bigger.</span>
+      </h1>
+      <p class="hero__sub">A better career is out there. We'll help you find it.</p>
+ 
+      <!-- Search Panel -->
+      <div class="search-panel" role="search">
+        <div class="search-panel__inner">
+          <div class="search-field">
+            <i class="fas fa-magnifying-glass search-field__icon"></i>
+            <input type="text" placeholder="Job title, keywords, or company" aria-label="Job title or keywords" />
+          </div>
+          <div class="search-divider"></div>
+          <div class="search-field">
+            <i class="fas fa-location-dot search-field__icon"></i>
+            <input type="text" placeholder="City, state, or remote" aria-label="Location" />
+          </div>
+          <div class="search-divider"></div>
+          <div class="search-field search-field--select">
+            <i class="fas fa-th-large search-field__icon"></i>
+            <select aria-label="Job category">
+              <option value="">All Categories</option>
+              <option>Technology & IT</option>
+              <option>Design & Creative</option>
+              <option>Marketing & Sales</option>
+              <option>Finance & Accounting</option>
+              <option>Healthcare</option>
+              <option>Education</option>
+              <option>Engineering</option>
+              <option>Legal</option>
+              <option>Customer Service</option>
+              <option>Human Resources</option>
+            </select>
+          </div>
+          <button class="btn btn--search" aria-label="Search jobs">
+            <i class="fas fa-magnifying-glass"></i>
+            <span>Search Jobs</span>
+          </button>
+        </div>
+ 
+        <div class="search-panel__tags">
+          <span class="tag-label">Popular:</span>
+          <a href="candidates.html?q=designer" class="search-tag">UI Designer</a>
+          <a href="candidates.html?q=developer" class="search-tag">Web Developer</a>
+          <a href="candidates.html?q=manager" class="search-tag">Product Manager</a>
+          <a href="candidates.html?q=data" class="search-tag">Data Analyst</a>
+          <a href="candidates.html?q=marketing" class="search-tag">Marketing</a>
+        </div>
+      </div>
+ 
+      <!-- Action Buttons -->
+      <div class="hero__actions">
+        <a href="candidates.html#resume" class="btn btn--dark">
+          <i class="fas fa-file-arrow-up"></i> Upload Your Resume
+        </a>
+        <a href="employers.html#post" class="btn btn--dark">
+          <i class="fas fa-pen-to-square"></i> Hiring? Post a Job for Free
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== STATS STRIP ===================== -->
+  <section class="stats" aria-label="Platform statistics">
+    <div class="container stats__grid">
+      <div class="stat-item">
+        <div class="stat-item__number" data-target="185400">0</div>
+        <div class="stat-item__label">Jobs Added</div>
+        <div class="stat-item__sub">Last 30 days</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-item__number" data-target="94200">0</div>
+        <div class="stat-item__label">Active Resumes</div>
+        <div class="stat-item__sub">Verified candidates</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-item__number" data-target="72800">0</div>
+        <div class="stat-item__label">Positions Matched</div>
+        <div class="stat-item__sub">Successful placements</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-item__number" data-target="12600">0</div>
+        <div class="stat-item__label">Companies Hiring</div>
+        <div class="stat-item__sub">Across all sectors</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== FEATURED JOBS ===================== -->
+  <section class="section featured-jobs" id="featured-jobs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Latest Opportunities</span>
+        <h2 class="section-title">Featured <span class="text-accent">Jobs</span></h2>
+        <p class="section-sub">Hand-picked roles from the world's top employers, updated daily.</p>
+      </div>
+ 
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-tab active" data-filter="all" role="tab">All Jobs</button>
+        <button class="filter-tab" data-filter="full-time" role="tab">Full-time</button>
+        <button class="filter-tab" data-filter="part-time" role="tab">Part-time</button>
+        <button class="filter-tab" data-filter="remote" role="tab">Remote</button>
+        <button class="filter-tab" data-filter="freelance" role="tab">Freelance</button>
+      </div>
+ 
+      <div class="jobs-grid" id="jobsGrid">
+ 
+        <article class="job-card" data-type="full-time">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--blue">
+              <i class="fab fa-google"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--full">Full-time</span>
+              <span class="job-featured"><i class="fas fa-star"></i> Featured</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Senior UX Designer</a></h3>
+          <p class="job-card__company">Google Inc.</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> San Francisco, CA</span>
+            <span><i class="fas fa-dollar-sign"></i> $120k – $160k/yr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">Figma</span>
+              <span class="job-tag">UX Research</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+        <article class="job-card" data-type="remote">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--purple">
+              <i class="fab fa-slack"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--remote">Remote</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Full-Stack Engineer</a></h3>
+          <p class="job-card__company">Slack Technologies</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> Remote · Worldwide</span>
+            <span><i class="fas fa-dollar-sign"></i> $110k – $150k/yr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">React</span>
+              <span class="job-tag">Node.js</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+        <article class="job-card" data-type="full-time">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--orange">
+              <i class="fab fa-amazon"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--full">Full-time</span>
+              <span class="job-featured"><i class="fas fa-star"></i> Featured</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Product Manager</a></h3>
+          <p class="job-card__company">Amazon Web Services</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> Seattle, WA</span>
+            <span><i class="fas fa-dollar-sign"></i> $130k – $180k/yr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">Agile</span>
+              <span class="job-tag">Cloud</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+        <article class="job-card" data-type="part-time">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--red">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--part">Part-time</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Content Strategist</a></h3>
+          <p class="job-card__company">YouTube / Google</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> New York, NY</span>
+            <span><i class="fas fa-dollar-sign"></i> $60k – $90k/yr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">SEO</span>
+              <span class="job-tag">Content</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+        <article class="job-card" data-type="freelance">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--teal">
+              <i class="fab fa-shopify"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--freelance">Freelance</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Brand Designer</a></h3>
+          <p class="job-card__company">Shopify Partners</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> Remote · US Only</span>
+            <span><i class="fas fa-dollar-sign"></i> $80 – $120/hr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">Branding</span>
+              <span class="job-tag">Illustrator</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+        <article class="job-card" data-type="full-time">
+          <div class="job-card__header">
+            <div class="company-logo company-logo--blue-dark">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <div class="job-card__meta">
+              <span class="job-type job-type--full">Full-time</span>
+              <span class="job-featured"><i class="fas fa-star"></i> Featured</span>
+            </div>
+          </div>
+          <h3 class="job-card__title"><a href="job-detail.html">Data Scientist</a></h3>
+          <p class="job-card__company">Microsoft Azure</p>
+          <div class="job-card__info">
+            <span><i class="fas fa-location-dot"></i> Redmond, WA</span>
+            <span><i class="fas fa-dollar-sign"></i> $140k – $190k/yr</span>
+          </div>
+          <div class="job-card__footer">
+            <div class="job-card__tags">
+              <span class="job-tag">Python</span>
+              <span class="job-tag">ML</span>
+            </div>
+            <a href="job-detail.html" class="btn btn--apply">Apply Now</a>
+          </div>
+        </article>
+ 
+      </div>
+ 
+      <div class="section-cta">
+        <a href="candidates.html#browse" class="btn btn--outline-blue">
+          Browse All Jobs <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== POPULAR CATEGORIES ===================== -->
+  <section class="section categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Explore by Field</span>
+        <h2 class="section-title">Popular <span class="text-accent">Categories</span></h2>
+        <p class="section-sub">Thousands of openings across every discipline — find yours.</p>
+      </div>
+ 
+      <div class="categories-grid">
+        <a href="candidates.html?cat=tech" class="category-card">
+          <div class="category-card__icon cat-icon--blue">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Technology & IT</h3>
+          <span class="category-card__count">4,285 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=design" class="category-card">
+          <div class="category-card__icon cat-icon--pink">
+            <i class="fas fa-pen-ruler"></i>
+          </div>
+          <h3>Design & Creative</h3>
+          <span class="category-card__count">2,140 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=marketing" class="category-card">
+          <div class="category-card__icon cat-icon--orange">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3>Marketing & Sales</h3>
+          <span class="category-card__count">3,076 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=finance" class="category-card">
+          <div class="category-card__icon cat-icon--green">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Finance & Accounting</h3>
+          <span class="category-card__count">1,862 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=health" class="category-card">
+          <div class="category-card__icon cat-icon--red">
+            <i class="fas fa-heart-pulse"></i>
+          </div>
+          <h3>Healthcare</h3>
+          <span class="category-card__count">2,540 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=education" class="category-card">
+          <div class="category-card__icon cat-icon--yellow">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Education</h3>
+          <span class="category-card__count">1,290 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=engineering" class="category-card">
+          <div class="category-card__icon cat-icon--teal">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Engineering</h3>
+          <span class="category-card__count">3,412 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+        <a href="candidates.html?cat=legal" class="category-card">
+          <div class="category-card__icon cat-icon--purple">
+            <i class="fas fa-scale-balanced"></i>
+          </div>
+          <h3>Legal</h3>
+          <span class="category-card__count">980 Jobs</span>
+          <div class="category-card__arrow"><i class="fas fa-arrow-right"></i></div>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== TOP COMPANIES ===================== -->
+  <section class="section top-companies" id="top-companies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Who's Hiring</span>
+        <h2 class="section-title">Top <span class="text-accent">Companies</span></h2>
+        <p class="section-sub">Join industry leaders who trust Careerfy to find exceptional talent.</p>
+      </div>
+ 
+      <div class="companies-grid">
+        <a href="employers.html?co=google" class="company-card">
+          <div class="company-card__logo company-logo--blue"><i class="fab fa-google fa-2x"></i></div>
+          <h3 class="company-card__name">Google</h3>
+          <p class="company-card__industry">Technology</p>
+          <span class="company-card__jobs">124 Open Positions</span>
+        </a>
+        <a href="employers.html?co=microsoft" class="company-card">
+          <div class="company-card__logo company-logo--blue-dark"><i class="fab fa-microsoft fa-2x"></i></div>
+          <h3 class="company-card__name">Microsoft</h3>
+          <p class="company-card__industry">Technology</p>
+          <span class="company-card__jobs">98 Open Positions</span>
+        </a>
+        <a href="employers.html?co=amazon" class="company-card">
+          <div class="company-card__logo company-logo--orange"><i class="fab fa-amazon fa-2x"></i></div>
+          <h3 class="company-card__name">Amazon</h3>
+          <p class="company-card__industry">E-Commerce & Cloud</p>
+          <span class="company-card__jobs">210 Open Positions</span>
+        </a>
+        <a href="employers.html?co=apple" class="company-card">
+          <div class="company-card__logo company-logo--dark"><i class="fab fa-apple fa-2x"></i></div>
+          <h3 class="company-card__name">Apple Inc.</h3>
+          <p class="company-card__industry">Consumer Tech</p>
+          <span class="company-card__jobs">76 Open Positions</span>
+        </a>
+        <a href="employers.html?co=meta" class="company-card">
+          <div class="company-card__logo company-logo--blue"><i class="fab fa-meta fa-2x"></i></div>
+          <h3 class="company-card__name">Meta</h3>
+          <p class="company-card__industry">Social Media</p>
+          <span class="company-card__jobs">143 Open Positions</span>
+        </a>
+        <a href="employers.html?co=netflix" class="company-card">
+          <div class="company-card__logo company-logo--red"><i class="fab fa-youtube fa-2x"></i></div>
+          <h3 class="company-card__name">Netflix</h3>
+          <p class="company-card__industry">Entertainment</p>
+          <span class="company-card__jobs">55 Open Positions</span>
+        </a>
+      </div>
+ 
+      <div class="section-cta">
+        <a href="employers.html" class="btn btn--outline-blue">
+          View All Companies <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Simple Process</span>
+        <h2 class="section-title">How It <span class="text-accent">Works</span></h2>
+        <p class="section-sub">Get hired in four easy steps — no headaches, no lengthy processes.</p>
+      </div>
+ 
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-card__number">01</div>
+          <div class="step-card__icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3 class="step-card__title">Create Account</h3>
+          <p class="step-card__desc">Sign up for free in under 60 seconds. No credit card required.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">02</div>
+          <div class="step-card__icon">
+            <i class="fas fa-file-arrow-up"></i>
+          </div>
+          <h3 class="step-card__title">Upload Resume</h3>
+          <p class="step-card__desc">Add your resume and let recruiters come to you automatically.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__number">03</div>
+          <div class="step-card__icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h3 class="step-card__title">Apply for Jobs</h3>
+          <p class="step-card__desc">Browse curated listings and apply with a single click.</p>
+          <div class="step-connector"></div>
+        </div>
+        <div class="step-card step-card--last">
+          <div class="step-card__number">04</div>
+          <div class="step-card__icon step-card__icon--accent">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="step-card__title">Get Hired</h3>
+          <p class="step-card__desc">Receive offers, negotiate, and land the role you deserve.</p>
+        </div>
+      </div>
+ 
+      <div class="hiw-cta">
+        <a href="register.html" class="btn btn--primary btn--lg">Get Started Free</a>
+        <a href="candidates.html" class="btn btn--ghost-blue btn--lg">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Success Stories</span>
+        <h2 class="section-title">What Our Users <span class="text-accent">Say</span></h2>
+        <p class="section-sub">Over 72,000 professionals found their dream role with Careerfy.</p>
+      </div>
+ 
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"Careerfy cut my job search from months to 3 weeks. The filtering tools and company insights made all the difference. I landed a Senior PM role at a company I love."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#1EA7E1;">JM</div>
+            <div>
+              <strong>James Mitchell</strong>
+              <span>Product Manager · Google</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"As a recent graduate, I was lost. Careerfy's resume upload feature got me noticed by three recruiters in a single week. Now I'm a UX Designer at a top agency."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#7C3AED;">SR</div>
+            <div>
+              <strong>Sophia Rodriguez</strong>
+              <span>UX Designer · Figma Inc.</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-card__quote">"We hired 12 engineers in 6 weeks using Careerfy. The candidate quality is exceptional and the employer tools make pipeline management a breeze."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#059669;">DK</div>
+            <div>
+              <strong>David Kim</strong>
+              <span>Head of Talent · Stripe</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+          </div>
+          <p class="testimonial-card__quote">"The job alerts feature is gold. I set my preferences once and Careerfy delivered perfectly matched remote roles every morning. Found my current job in just 10 days."</p>
+          <div class="testimonial-card__author">
+            <div class="author-avatar" style="background:#DC2626;">AL</div>
+            <div>
+              <strong>Aisha Laurent</strong>
+              <span>Data Analyst · Shopify</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Dots -->
+      <div class="testimonials-dots" id="testimonialsDots">
+        <button class="t-dot active" data-idx="0"></button>
+        <button class="t-dot" data-idx="1"></button>
+        <button class="t-dot" data-idx="2"></button>
+        <button class="t-dot" data-idx="3"></button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ===================== NEWSLETTER ===================== -->
+  <section class="newsletter" id="newsletter">
+    <div class="newsletter__bg"></div>
+    <div class="container newsletter__inner">
+      <div class="newsletter__text">
+        <h2>Never Miss an Opportunity</h2>
+        <p>Get the latest job openings tailored to your skills — delivered weekly to your inbox.</p>
+      </div>
+      <form class="newsletter__form" onsubmit="handleNewsletter(event)">
+        <div class="newsletter__input-wrap">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Enter your email address" required aria-label="Email for newsletter" />
+        </div>
+        <button type="submit" class="btn btn--primary">
+          Subscribe <i class="fas fa-arrow-right"></i>
+        </button>
+      </form>
+      <p class="newsletter__note"><i class="fas fa-lock"></i> No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+ 
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <div class="container footer__grid">
+ 
+        <!-- Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="index.html" class="navbar__logo footer__logo">
+            <span class="logo-icon"><i class="fas fa-briefcase"></i></span>
+            <span class="logo-text">Career<span class="logo-accent">fy</span></span>
+          </a>
+          <p class="footer-brand__desc">The smarter way to find your next career move or hire exceptional talent. Trusted by thousands of professionals worldwide.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+ 
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+ 
+        <!-- Candidates -->
+        <div class="footer-col">
+          <h4 class="footer-col__heading">For Candidates</h4>
+          <ul>
+            <li><a href="candidates.html#browse">Browse Jobs</a></li>
+            <li><a href="candidates.html#resume">Upload Resume</a></li>
+            <li><a href="candidates.html#alerts">Job Alerts</a></li>
+            <li><a href="candidates.html#profile">My Profile</a></li>
+            <li><a href="candidates.html#saved">Saved Jobs</a></li>
+            <li><a href="candidates.html#applied">Applied Jobs</a></li>
+          </ul>
+        </div>
+ 
+        <!-- Employers -->
+        <div class="footer-col">
+          <h4 class="footer-col__heading">For Employers</h4>
+          <ul>
+            <li><a href="employers.html#post">Post a Job</a></li>
+            <li><a href="employers.html#search">Search Candidates</a></li>
+            <li><a href="employers.html#dashboard">Dashboard</a></li>
+            <li><a href="employers.html#plans">Pricing Plans</a></li>
+            <li><a href="employers.html#analytics">Analytics</a></li>
+            <li><a href="employers.html#support">Support</a></li>
+          </ul>
+        </div>
+ 
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h4 class="footer-col__heading">Get in Touch</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> 350 Fifth Ave, New York, NY 10118</li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+18001234567">+1 800 123 4567</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:hello@careerfy.com">hello@careerfy.com</a></li>
+            <li><i class="fas fa-clock"></i> Mon – Fri, 9am – 6pm EST</li>
+          </ul>
+          <div class="app-badges">
+            <a href="#" class="app-badge"><i class="fab fa-apple"></i> App Store</a>
+            <a href="#" class="app-badge"><i class="fab fa-google-play"></i> Play Store</a>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+ 
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2025 Careerfy. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="cookies.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+ 
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+ 
+  <script src="jobscript.js"></script>
+</body>
+</html>
+ 
